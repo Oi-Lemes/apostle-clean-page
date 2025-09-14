@@ -1,23 +1,31 @@
-import { BookOpen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface LetterCardProps {
   title: string;
   subtitle: string;
+  image: string;
 }
 
-const LetterCard = ({ title, subtitle }: LetterCardProps) => {
+const LetterCard = ({ title, subtitle, image }: LetterCardProps) => {
   return (
-    <Card className="bg-gradient-card border-border/50 p-4 hover:shadow-golden transition-all duration-300 hover:scale-105 cursor-pointer group">
-      <div className="flex items-center gap-3">
-        <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:animate-glow">
-            <BookOpen className="w-6 h-6 text-primary-foreground" />
-          </div>
+    <Card className="bg-gradient-card border-border/50 hover:shadow-golden transition-all duration-300 hover:scale-105 cursor-pointer group overflow-hidden">
+      <div className="relative">
+        {/* Image Background */}
+        <div className="h-32 relative overflow-hidden">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/50 to-transparent" />
         </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-bold text-foreground text-sm leading-tight">{title}</h3>
-          <p className="text-muted-foreground text-xs mt-1 leading-tight">{subtitle}</p>
+        
+        {/* Content */}
+        <div className="p-4 relative -mt-8 z-10">
+          <div className="bg-gradient-card rounded-lg p-3 border border-border/30">
+            <h3 className="font-bold text-primary text-sm leading-tight mb-1">{title}</h3>
+            <p className="text-muted-foreground text-xs leading-tight">{subtitle}</p>
+          </div>
         </div>
       </div>
     </Card>
