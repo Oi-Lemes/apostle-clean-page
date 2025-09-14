@@ -23,12 +23,12 @@ const PriceCard = () => {
         <h3 className="text-2xl font-bold text-primary mb-2">APENAS</h3>
         <div className="text-4xl font-bold text-primary">R$ 10,00</div>
       </div>
-      <Button 
-        size="lg" 
-        className="w-full bg-gradient-primary hover:scale-105 transition-all duration-300 font-bold text-primary-foreground shadow-golden"
-      >
-        Adquirir Agora
-      </Button>
+     <Button
+  size="lg"
+  className="btn-comprar w-full bg-gradient-primary hover:scale-105 transition-all duration-300 font-bold text-primary-foreground shadow-golden"
+>
+  Adquirir Agora
+</Button>
       
       {/* WhatsApp Delivery Info */}
       <div className="mt-4 p-3 bg-muted rounded-lg border border-border/30">
