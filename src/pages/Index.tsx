@@ -11,14 +11,54 @@ import colossiansImage from "@/assets/colossians.jpg";
 import joyImage from "@/assets/joy.jpg";
 
 const letters = [
-  { title: "ROMANOS", subtitle: "Justiça de Deus", image: romansImage },
-  { title: "GÁLATAS", subtitle: "Evangelho", image: galatiansImage },
-  { title: "CORÍNTIOS", subtitle: "Vida Cristã", image: corinthiansImage },
-  { title: "ALEGRIA", subtitle: "As Cartas de Paulo", image: joyImage },
-  { title: "EFÉSIOS", subtitle: "Graça", image: ephesiansImage },
-  { title: "FILIPENSES", subtitle: "Alegria", image: philippiansImage },
-  { title: "TITO", subtitle: "Filemon e Estudo de Bíblia", image: titusImage },
-  { title: "COLOSSENSES", subtitle: "Filemon e Estudo de Bíblia", image: colossiansImage },
+  { 
+    title: "ROMANOS", 
+    subtitle: "Justiça de Deus", 
+    description: "A salvação pela fé e a transformação do coração humano",
+    image: romansImage 
+  },
+  { 
+    title: "GÁLATAS", 
+    subtitle: "Evangelho", 
+    description: "A liberdade em Cristo e a vida no Espírito Santo",
+    image: galatiansImage 
+  },
+  { 
+    title: "CORÍNTIOS", 
+    subtitle: "Vida Cristã", 
+    description: "Orientações práticas para a igreja e vida comunitária",
+    image: corinthiansImage 
+  },
+  { 
+    title: "ALEGRIA", 
+    subtitle: "As Cartas de Paulo", 
+    description: "A verdadeira alegria que vem da fé em Jesus Cristo",
+    image: joyImage 
+  },
+  { 
+    title: "EFÉSIOS", 
+    subtitle: "Graça", 
+    description: "A unidade da igreja e a armadura espiritual",
+    image: ephesiansImage 
+  },
+  { 
+    title: "FILIPENSES", 
+    subtitle: "Alegria", 
+    description: "Contentamento e alegria mesmo nas dificuldades",
+    image: philippiansImage 
+  },
+  { 
+    title: "TITO", 
+    subtitle: "Filemon e Estudo de Bíblia", 
+    description: "Liderança cristã e organização da igreja primitiva",
+    image: titusImage 
+  },
+  { 
+    title: "COLOSSENSES", 
+    subtitle: "Filemon e Estudo de Bíblia", 
+    description: "A supremacia de Cristo e vida cristã prática",
+    image: colossiansImage 
+  },
 ];
 
 const Index = () => {
@@ -64,6 +104,7 @@ const Index = () => {
               key={index}
               title={letter.title}
               subtitle={letter.subtitle}
+              description={letter.description}
               image={letter.image}
             />
           ))}

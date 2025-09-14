@@ -3,10 +3,11 @@ import { Card } from "@/components/ui/card";
 interface LetterCardProps {
   title: string;
   subtitle: string;
+  description: string;
   image: string;
 }
 
-const LetterCard = ({ title, subtitle, image }: LetterCardProps) => {
+const LetterCard = ({ title, subtitle, description, image }: LetterCardProps) => {
   return (
     <Card className="bg-gradient-card border-border/50 hover:shadow-golden transition-all duration-300 hover:scale-105 cursor-pointer group overflow-hidden">
       <div className="relative">
@@ -24,7 +25,8 @@ const LetterCard = ({ title, subtitle, image }: LetterCardProps) => {
         <div className="p-4 relative -mt-8 z-10">
           <div className="bg-gradient-card rounded-lg p-3 border border-border/30">
             <h3 className="font-bold text-primary text-sm leading-tight mb-1">{title}</h3>
-            <p className="text-muted-foreground text-xs leading-tight">{subtitle}</p>
+            <p className="text-muted-foreground text-xs leading-tight mb-2">{subtitle}</p>
+            <p className="text-muted-foreground text-xs leading-relaxed opacity-90">{description}</p>
           </div>
         </div>
       </div>
