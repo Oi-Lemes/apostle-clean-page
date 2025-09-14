@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, Languages } from "lucide-react";
+import { Volume2, Languages, MessageCircle } from "lucide-react";
 
 const PriceCard = () => {
   return (
@@ -29,6 +29,18 @@ const PriceCard = () => {
       >
         Adquirir Agora
       </Button>
+      
+      {/* WhatsApp Delivery Info */}
+      <div className="mt-4 p-3 bg-muted rounded-lg border border-border/30">
+        <div className="flex items-center justify-center gap-2 mb-1">
+          <MessageCircle className="w-4 h-4 text-primary" />
+          <span className="text-primary font-semibold text-sm">Entrega via WhatsApp</span>
+        </div>
+        <p className="text-muted-foreground text-xs leading-relaxed">
+          Após a compra, você receberá todas as cartas e áudios diretamente no seu WhatsApp
+        </p>
+      </div>
+      
       <p className="text-muted-foreground text-sm mt-3">
         Filemon e Estudo de Bíblia
       </p>
